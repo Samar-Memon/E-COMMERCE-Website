@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --orange: #F26E08;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+header{
+    height: 75vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/hbg.jpg) center no-repeat;
+    background-size: cover;
+}
+nav{
+    position: fixed;
+    background-color: #F1f5f3;
+    width: 100%;
+    top: 0%;
+    height: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+a.logo{
+    font-size: 4rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--orange);
+    margin-left: 3rem;
+}
+a.logo:hover{
+    color: #000;
+}
+ul.menu-items{
+    margin-right: 4rem;
+}
+ul.menu-items li{
+    list-style: none;
+    display: inline-block;
+    margin-inline: 2rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+ul.menu-items li a{
+    text-decoration: none;
+    color: var(--orange);
+    position: relative;
+}
+ul.menu-items li.active a{
+    color: #000;
+}
+ul.menu-items li.active a::after{
+    background-color: var(--orange);
+}
+ul.menu-items li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0.3rem;
+    border-radius: 1rem;
+    background-color: #000;
+    bottom: -1rem;
+    left: 0;
+    transition: all 300ms ease;
+}
+ul.menu-items li a:hover::after{
+    width: 100%;
+}
+.iBox{
+    font-size: 4rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    display: none;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    color: #F1f5f3;
+    text-align: center;
+}
+.home-content h1{
+    font-size: 4rem;
+    margin-bottom: 1.3rem;
+}
+.home-content p{
+    font-size: 2rem;
+}
+.home-content a{
+    text-decoration: none;
+    color: #F1f5f3;
+    border: 2px solid #F1f5f3;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all 400ms ease;
+}
+.home-content a:hover{
+    background-color: #F1f5f3;
+    color: #000;
+}
+
+
+/* ##################### Items Styling ################# */
+#item{
+    margin-top: 4rem;
+}
+#item h1{
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--orange);
+    margin-bottom: 2rem;
+}
+#item h1 span{
+    color: #000;
+}
+.card{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f1f5f38d;
+    overflow: hidden;
+}
+.c-child{
+    width: 30%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.c-child img{
+    display: block;
+    width: 100%;
+    height: 80%;
+}
+.c-child:hover{
+    transform: scale(1.1);
+}
+.c-child h2{
+    font-size: 2.6rem;
+}
+.c-child .star{
+    font-size: 1.6rem;
+    color: var(--orange);
+}
+
+
+/* ##################### det Styling ################# */
+.det{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10rem;
+    display: none;
+    margin-top: 4rem;
+    background-color: #dddd;
+}
+.det img{
+    width: 39%;
+}
+.det .c-text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem;
+}
+.det .c-text h1{
+    font-size: 3rem;
+}
+.det .c-text h2{
+    font-size: 2.5rem;
+}
+.det .c-text span{
+    font-size: 2rem;
+}
+.det .c-text input{
+    font-size: 2rem;
+    width: 10%;
+}
+.det .c-text h3{
+    font-size: 2.6rem;
+    color: rgb(15, 128, 0);
+}
+.det .c-text p{
+    font-size: 1.6rem;
+}
+.det .c-text a{
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: var(--orange);
+    color: #fff;
+    padding: 0.5rem 3rem;
+}
+.det .c-text .btns{
+    margin-top: 3rem;
+}
+.det .c-text button{
+    font-size: 2rem;
+    background-color: var(--orange);
+    color: #fff;
+    padding: 0.5rem 2.6rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 4rem;
+}
+
+
+/* ##################### buy Styling ################# */
+.buy-start{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    display: none;
+}
+.buy{
+    background: #fff;
+    width: 40%;
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    top: 0px;
+}
+.buy .xcross{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0.6rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.buy input,select{
+    padding: 1rem;
+    outline: none;
+    border: 2px solid #000;
+}
+.buy button{
+    border: 2px solid #000;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* ##################### review Styling ################# */
+#review{
+    margin-top: 4rem;
+    padding: 2rem;
+}
+.r-card{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.r-child{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f1f5f382;
+    padding: 3rem;
+    height: 50vh;
+    text-align: center;
+    cursor: pointer;
+}
+.r-child:hover{
+    background-color: #ddd;
+}
+.r-child img{
+    width: 50%;
+    margin: auto;
+    height: 20vh;
+    border-radius: 50%;
+}
+.r-child h2{
+    font-size: 2.7rem;
+}
+.r-child p{
+    font-size: 1.8rem;
+}
+.r-child a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+}
+
+
+
+/* ##################### contactus Styling ################# */
+#contactus{
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #ddd;
+}
+#contactus form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    padding: 1rem;
+}
+#contactus form input{
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+#contactus form button{
+    align-self: center;
+    width: 50%;
+    font-size: 2rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+
+/* ##################### footer Styling ################# */
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 1.3rem 0;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer span{
+    margin-left: 4rem;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 4rem;
+    font-size: 1.6rem;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 815px){
+    .c-child{
+        width: 49%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .det{
+        padding: 4rem;
+    }
+    .det img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .det .c-text{
+        width: 100%;
+    }
+    .r-child{
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+}
+@media only screen and (max-width: 750px){
+    ul.menu-items{
+        display: none;
+    }
+    .iBox{
+        display: block;
+    }
+    ul.showMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: #f1f5f3de;
+        padding: 1rem;
+    }
+    ul.showMenu li{
+        margin-bottom: 3rem;
+    }
+    .buy{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 575px){
+    .c-child{
+        width: 100%;
+    }
+    .buy{
+        width: 80%;
+    }
+    .r-child{
+        width: 100%;
+    }
+    #contactus form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .det{
+        padding: 0.5rem;
+    }
+    .buy{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 575px){
+    .det .c-text .btns button{
+        margin-left: 1rem;
+    }
+}
+@media (orientation: landscape) and (max-height: 500px){
+    header{
+        height: 40vmax;
+    }
+}
