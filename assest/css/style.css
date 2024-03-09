@@ -146,6 +146,7 @@ ul.menu-items li a:hover::after{
     gap: 1rem;
     text-align: center;
     transition: all 300ms ease;
+    cursor: pointer;
 }
 .c-child img{
     display: block;
