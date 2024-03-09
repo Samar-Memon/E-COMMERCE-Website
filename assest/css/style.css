@@ -415,6 +415,7 @@ footer a:hover{
         width: 60%;
     }
 }
+
 @media only screen and (max-width: 575px){
     .c-child{
         width: 100%;
